@@ -1,0 +1,22 @@
+{
+  "cleanUrls": true,
+  "trailingSlash": false,
+  "redirects": [
+    { "source": "/get", "destination": "/#download", "statusCode": 302 },
+    { "source": "/download", "destination": "https://github.com/Drhylicious/SAGANA/releases/latest/download/SAGANA.apk", "statusCode": 302 }
+  ],
+  "headers": [
+    {
+      "source": "/(.*)",
+      "headers": [
+        { "key": "X-Content-Type-Options", "value": "nosniff" },
+        { "key": "Referrer-Policy", "value": "strict-origin-when-cross-origin" },
+        { "key": "X-Frame-Options", "value": "SAMEORIGIN" }
+      ]
+    },
+    {
+      "source": "/assets/(.*)",
+      "headers": [ { "key": "Cache-Control", "value": "public, max-age=604800" } ]
+    }
+  ]
+}

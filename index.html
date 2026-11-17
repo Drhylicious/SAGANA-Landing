@@ -1,0 +1,456 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>SAGANA – Farm Records, Marketplace and Cooperative App</title>
+  <meta name="description" content="SAGANA is the mobile app of the SP3 Agriculture Cooperative of Barangay Payanas, Torrijos, Marinduque. Download the Android app for farm records, a digital marketplace, loans, programs, prices and reports.">
+  <meta name="theme-color" content="#00450D">
+  <link rel="canonical" href="https://sagana-landing.vercel.app/">
+  <link rel="icon" type="image/png" href="assets/favicon.png">
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="SAGANA">
+  <meta property="og:title" content="SAGANA – From harvest to marketplace, in one app">
+  <meta property="og:description" content="Farm records, a digital marketplace, loans, programs and reports for the SP3 Agriculture Cooperative. Download the Android app.">
+  <meta property="og:url" content="https://sagana-landing.vercel.app/">
+  <meta property="og:image" content="https://sagana-landing.vercel.app/assets/og.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script>document.documentElement.classList.add('js');</script>
+</head>
+<body>
+
+<!-- Icon sprite -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <symbol id="i-leaf" viewBox="0 0 24 24"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"/><path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"/></symbol>
+    <symbol id="i-store" viewBox="0 0 24 24"><path d="M3 9l1.5-5h15L21 9"/><path d="M3 9a3 3 0 0 0 6 0 3 3 0 0 0 6 0 3 3 0 0 0 6 0"/><path d="M5 12v8h14v-8"/><path d="M10 20v-5h4v5"/></symbol>
+    <symbol id="i-truck" viewBox="0 0 24 24"><path d="M1 6h13v11H1z"/><path d="M14 10h4l3 3v4h-7"/><circle cx="6" cy="18" r="2"/><circle cx="17" cy="18" r="2"/></symbol>
+    <symbol id="i-wallet" viewBox="0 0 24 24"><rect x="2" y="6" width="20" height="14" rx="2"/><path d="M2 10h20"/><circle cx="17" cy="15" r="1.2"/></symbol>
+    <symbol id="i-users" viewBox="0 0 24 24"><circle cx="9" cy="8" r="3.5"/><path d="M2 20c0-3.5 3-6 7-6s7 2.5 7 6"/><circle cx="17.5" cy="9" r="2.5"/><path d="M18 14c2.5.3 4 2.2 4 5"/></symbol>
+    <symbol id="i-chart" viewBox="0 0 24 24"><path d="M4 20V10M10 20V4M16 20v-8M22 20H2"/></symbol>
+    <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></symbol>
+    <symbol id="i-sync" viewBox="0 0 24 24"><path d="M21 12a9 9 0 0 1-15.5 6.2L3 16"/><path d="M3 12A9 9 0 0 1 18.5 5.8L21 8"/><path d="M21 3v5h-5M3 21v-5h5"/></symbol>
+    <symbol id="i-file" viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6M8 13h8M8 17h8"/></symbol>
+    <symbol id="i-download" viewBox="0 0 24 24"><path d="M12 3v12m0 0l-4-4m4 4l4-4"/><path d="M4 20h16"/></symbol>
+    <symbol id="i-phone" viewBox="0 0 24 24"><rect x="7" y="2" width="10" height="20" rx="2.5"/><path d="M11 18h2"/></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7"/></symbol>
+    <symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z"/><path d="M9 12l2 2 4-4"/></symbol>
+    <symbol id="i-globe" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c3 3 3 15 0 18M12 3c-3 3-3 15 0 18"/></symbol>
+    <symbol id="i-qr" viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><path d="M14 14h3v3h-3zM20 14v3M17 20h4"/></symbol>
+    <symbol id="i-boxes" viewBox="0 0 24 24"><path d="M21 8l-9-5-9 5v8l9 5 9-5z"/><path d="M3 8l9 5 9-5M12 13v8"/></symbol>
+    <symbol id="i-briefcase" viewBox="0 0 24 24"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M9 7V5a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v2M3 13h18"/></symbol>
+    <symbol id="i-cart" viewBox="0 0 24 24"><circle cx="9" cy="20" r="1.5"/><circle cx="18" cy="20" r="1.5"/><path d="M2 3h3l2.5 12h11L21 7H6"/></symbol>
+    <symbol id="i-chevron" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></symbol>
+    <symbol id="i-bell" viewBox="0 0 24 24"><path d="M6 8a6 6 0 0 1 12 0c0 7 3 8 3 8H3s3-1 3-8"/><path d="M10 20a2 2 0 0 0 4 0"/></symbol>
+  </defs>
+</svg>
+
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="nav" id="top">
+  <div class="wrap nav-inner">
+    <a class="brand" href="#top" aria-label="SAGANA home">
+      <img src="assets/logo-96.png" width="36" height="36" alt="">
+      <span>SAGANA</span>
+    </a>
+    <nav id="menu" class="menu" aria-label="Main">
+      <a href="#about">About</a>
+      <a href="#features">Features</a>
+      <a href="#roles">Who it's for</a>
+      <a href="#preview">Preview</a>
+      <a href="#how">How to use</a>
+      <a href="#faq">FAQ</a>
+      <a href="#team">Team</a>
+      <a class="btn btn-gold btn-sm menu-cta" href="#download">Download</a>
+    </nav>
+    <button class="burger" id="burger" aria-label="Open menu" aria-expanded="false" aria-controls="menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<main id="main">
+
+<!-- A. HERO -->
+<section class="hero">
+  <div class="hero-bg" aria-hidden="true"></div>
+  <div class="wrap hero-grid">
+    <div class="hero-copy">
+      <p class="eyebrow"><svg class="ic"><use href="#i-leaf"/></svg> SP3 Agriculture Cooperative · Payanas, Torrijos, Marinduque</p>
+      <h1>From harvest to marketplace, in one app.</h1>
+      <p class="lead">SAGANA helps farmers record their harvests, buyers shop approved local produce, and cooperative staff manage inventory, loans, programs and reports – all from an Android phone.</p>
+      <div class="hero-actions">
+        <a class="btn btn-gold btn-lg" href="#download"><svg class="ic"><use href="#i-download"/></svg> Download Now</a>
+        <a class="btn btn-ghost btn-lg" href="#features">Explore the System</a>
+      </div>
+      <ul class="hero-points">
+        <li><svg class="ic"><use href="#i-check"/></svg> Android 7.0 or later</li>
+        <li><svg class="ic"><use href="#i-check"/></svg> English and Filipino</li>
+        <li><svg class="ic"><use href="#i-check"/></svg> Works with weak signal</li>
+      </ul>
+    </div>
+    <div class="hero-phones" aria-label="Screens from the SAGANA app">
+      <figure class="phone p-left"><img src="assets/screens/buyer-browse.webp" width="520" height="1125" alt="SAGANA Buyer marketplace showing approved crop listings" fetchpriority="high"></figure>
+      <figure class="phone p-right"><img src="assets/screens/staff-dashboard.webp" width="520" height="1125" alt="SAGANA Manager dashboard with today's priorities and cooperative performance" fetchpriority="high"></figure>
+      <figure class="phone p-center"><img src="assets/screens/farmer-home.webp" width="520" height="1125" alt="SAGANA Farmer Home with priorities, monthly yield and earnings, and market rates" fetchpriority="high"></figure>
+    </div>
+  </div>
+</section>
+
+<!-- B. ABOUT -->
+<section class="section" id="about">
+  <div class="wrap about-grid">
+    <div class="reveal">
+      <p class="kicker">About SAGANA</p>
+      <h2>One system for the cooperative's farms, stock and sales.</h2>
+      <p>SAGANA stands for <strong>Streamlined Agricultural Gateway for Agribusiness, Networking, and Analytics</strong>. It is a mobile system built for the SP3 Agriculture Cooperative of Barangay Payanas, Torrijos, Marinduque.</p>
+      <p>It replaces paper logbooks and scattered records. Farmers write down what they plant and harvest. The cooperative sees what stock is available and where products go. Buyers can order approved produce for pickup or delivery. Loans, programs and reports live in the same place, so everyone works from the same up-to-date records.</p>
+    </div>
+    <div class="pillars">
+      <article class="pillar reveal">
+        <span class="pillar-ic"><svg class="ic"><use href="#i-boxes"/></svg></span>
+        <div><h3>Supply chain and inventory</h3><p>Harvest batches, shelf life, cooperative inventory and a read-only view that traces products from their source to the recipient.</p></div>
+      </article>
+      <article class="pillar reveal">
+        <span class="pillar-ic"><svg class="ic"><use href="#i-store"/></svg></span>
+        <div><h3>Digital marketplace</h3><p>Approved listings, a shopping cart, pickup or delivery orders, and order tracking from placed to completed.</p></div>
+      </article>
+      <article class="pillar reveal">
+        <span class="pillar-ic"><svg class="ic"><use href="#i-wallet"/></svg></span>
+        <div><h3>Cooperative services</h3><p>Loans and payments, programs, Capital Share, reference prices and reports for the Manager and Officers.</p></div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- C. FEATURES -->
+<section class="section section-tint" id="features">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <p class="kicker">System features</p>
+      <h2>Everything the cooperative does, on one phone.</h2>
+      <p>These are the modules in the current SAGANA app.</p>
+    </div>
+    <div class="cards">
+      <article class="card reveal"><span class="card-ic"><svg class="ic"><use href="#i-leaf"/></svg></span>
+        <h3>Farm records</h3><p>Keep a crop roster and farm details, record each harvest and track every batch in your inventory. Add expenses to see where your money goes.</p></article>
+      <article class="card reveal"><span class="card-ic"><svg class="ic"><use href="#i-store"/></svg></span>
+        <h3>Digital marketplace</h3><p>Farmers list produce for cooperative review. Buyers browse approved listings, compare prices and add items to a cart. Farmers can also buy cooperative products.</p></article>
+      <article class="card reveal"><span class="card-ic"><svg class="ic"><use href="#i-truck"/></svg></span>
+        <h3>Orders: pickup or delivery</h3><p>Choose pickup or delivery at checkout and follow the order through each step. The customer confirms receipt, and payment is recorded in cash at handover.</p></article>
+      <article class="card reveal"><span class="card-ic"><svg class="ic"><use href="#i-wallet"/></svg></span>
+        <h3>Loans and Capital Share</h3><p>Farmers can request input loans. Staff issue loans and record payments. A member's Capital Share builds from contributions and sets how much of each loan item they can borrow.</p></article>
+      <article class="card reveal"><span class="card-ic"><svg class="ic"><use href="#i-users"/></svg></span>
+        <h3>Programs</h3><p>The cooperative runs programs such as seed distributions. Farmers join, receive items and report the outcome, and staff review the evidence.</p></article>
+      <article class="card reveal"><span class="card-ic"><svg class="ic"><use href="#i-chart"/></svg></span>
+        <h3>Prices and analytics</h3><p>See reference market prices and price history. Harvest analytics and a planting forecast estimate cooperative supply from recorded harvests.</p></article>
+      <article class="card reveal"><span class="card-ic"><svg class="ic"><use href="#i-clock"/></svg></span>
+        <h3>Shelf-life monitoring</h3><p>Every harvest counts down from its harvest date using the crop's shelf life, and SAGANA reminds farmers to check produce before it is sold.</p></article>
+      <article class="card reveal"><span class="card-ic"><svg class="ic"><use href="#i-sync"/></svg></span>
+        <h3>Works with weak signal</h3><p>Harvests, expenses and some profile changes are saved on the phone and sent automatically when the connection returns. Orders and approvals need internet.</p></article>
+      <article class="card reveal"><span class="card-ic"><svg class="ic"><use href="#i-file"/></svg></span>
+        <h3>Reports and supply tracking</h3><p>Staff read sales, harvest, stock and loan reports and export them. Supply Chain Management shows recorded product movements, read-only.</p></article>
+    </div>
+    <ul class="chips reveal" aria-label="Also included">
+      <li><svg class="ic"><use href="#i-globe"/></svg> English and Filipino</li>
+      <li><svg class="ic"><use href="#i-bell"/></svg> In-app and phone notifications</li>
+      <li><svg class="ic"><use href="#i-phone"/></svg> Light and dark mode</li>
+      <li><svg class="ic"><use href="#i-shield"/></svg> Role-based access</li>
+    </ul>
+  </div>
+</section>
+
+<!-- D. ROLES -->
+<section class="section" id="roles">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <p class="kicker">Who it's for</p>
+      <h2>Four roles, each with their own tools.</h2>
+      <p>What you see in SAGANA depends on your account. You can also look around first with a sample-data preview.</p>
+    </div>
+    <div class="roles">
+      <article class="role reveal">
+        <header><span class="role-ic"><svg class="ic"><use href="#i-briefcase"/></svg></span><div><h3>Manager</h3><p>Runs the cooperative's operations</p></div></header>
+        <ul>
+          <li>Creates Officer accounts and sets each Officer's access</li>
+          <li>Reviews members and Farmer applications</li>
+          <li>Manages cooperative inventory, crops, programs and the loan item catalog</li>
+          <li>Issues loans, records payments, approves listings and orders</li>
+          <li>Reads and exports reports; sets cooperative details and delivery settings</li>
+          <li>Reviews the Staff Accountability log</li>
+        </ul>
+      </article>
+      <article class="role reveal">
+        <header><span class="role-ic"><svg class="ic"><use href="#i-shield"/></svg></span><div><h3>Officer</h3><p>Supports the Manager</p></div></header>
+        <ul>
+          <li>Can open the five staff areas: Dashboard, Members, Marketplace, Loans and Reports</li>
+          <li>The Manager gives each area <em>View Only</em> or <em>Manage</em> access</li>
+          <li>Acts only where Manage access is given</li>
+          <li>Can send announcements and notices to members</li>
+          <li>Creating Officers and changing cooperative settings stay with the Manager</li>
+        </ul>
+      </article>
+      <article class="role reveal">
+        <header><span class="role-ic"><svg class="ic"><use href="#i-leaf"/></svg></span><div><h3>Farmer</h3><p>Grows, records and sells</p></div></header>
+        <ul>
+          <li>Keeps a crop roster and farm details</li>
+          <li>Records harvests and expenses, even with weak signal</li>
+          <li>Lists produce for sale, offers produce to the cooperative, records informal sales</li>
+          <li>Requests loans, joins programs and views Capital Share</li>
+          <li>Buys products, including cooperative products</li>
+          <li>Needs the Manager's approval after registering</li>
+        </ul>
+      </article>
+      <article class="role reveal">
+        <header><span class="role-ic"><svg class="ic"><use href="#i-cart"/></svg></span><div><h3>Buyer</h3><p>Shops local produce</p></div></header>
+        <ul>
+          <li>Browses approved Public Market listings</li>
+          <li>Compares the cooperative's reference prices</li>
+          <li>Uses a cart and saved delivery addresses</li>
+          <li>Orders for pickup or delivery and tracks each order</li>
+          <li>Confirms receipt, or cancels an order that is still pending</li>
+          <li>Account is created instantly at registration</li>
+        </ul>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- E. APPLICATION PREVIEW -->
+<section class="section section-tint" id="preview">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <p class="kicker">Application preview</p>
+      <h2>Real screens from the app.</h2>
+      <p>These are screenshots of SAGANA running with test data.</p>
+    </div>
+    <div class="tabs reveal" role="tablist" aria-label="Choose a role">
+      <button role="tab" class="tab is-active" data-role="farmer" aria-selected="true">Farmer</button>
+      <button role="tab" class="tab" data-role="buyer" aria-selected="false">Buyer</button>
+      <button role="tab" class="tab" data-role="staff" aria-selected="false">Manager and Officer</button>
+    </div>
+
+    <div class="gallery" data-role="farmer" role="tabpanel">
+      <figure class="shot"><div class="phone"><img loading="lazy" src="assets/screens/farmer-home.webp" width="520" height="1125" alt="Farmer Home in the guest preview"></div>
+        <figcaption><h3>Home</h3><p>Priorities, monthly yield and earnings, sync status and market rates. Shown with guest sample data.</p></figcaption></figure>
+      <figure class="shot"><div class="phone"><img loading="lazy" src="assets/screens/farmer-roster.webp" width="520" height="1125" alt="Crop Roster listing crops with shelf life"></div>
+        <figcaption><h3>Crop Roster</h3><p>Your crops with their market type and shelf life. A photo of the crop is needed before it can be sold.</p></figcaption></figure>
+      <figure class="shot"><div class="phone"><img loading="lazy" src="assets/screens/farmer-record.webp" width="520" height="1125" alt="Record New Harvest crop picker"></div>
+        <figcaption><h3>Record a harvest</h3><p>Choose a crop from your roster and enter what you harvested.</p></figcaption></figure>
+      <figure class="shot"><div class="phone"><img loading="lazy" src="assets/screens/farmer-inventory.webp" width="520" height="1125" alt="Manage Inventory showing a batch with available stock and shelf life"></div>
+        <figcaption><h3>Manage Inventory</h3><p>Each batch shows available, reserved and sold stock, and days of shelf life left.</p></figcaption></figure>
+      <figure class="shot"><div class="phone"><img loading="lazy" src="assets/screens/farmer-capital.webp" width="520" height="1125" alt="My Capital Share screen"></div>
+        <figcaption><h3>My Capital Share</h3><p>Contributions and credits for the year, from monthly payments, purchases and offers.</p></figcaption></figure>
+      <figure class="shot"><div class="phone"><img loading="lazy" src="assets/screens/farmer-programs.webp" width="520" height="1125" alt="Programs list"></div>
+        <figcaption><h3>Programs</h3><p>Cooperative programs you can join, such as seed distributions.</p></figcaption></figure>
+    </div>
+
+    <div class="gallery" data-role="buyer" role="tabpanel" hidden>
+      <figure class="shot"><div class="phone"><img loading="lazy" src="assets/screens/buyer-browse.webp" width="520" height="1125" alt="Buyer marketplace"></div>
+        <figcaption><h3>Marketplace</h3><p>Search approved listings by crop and open your cart.</p></figcaption></figure>
+      <figure class="shot"><div class="phone"><img loading="lazy" src="assets/screens/buyer-product.webp" width="520" height="1125" alt="Product details with Buy Now"></div>
+        <figcaption><h3>Product details</h3><p>Price, available quantity and the selling cooperative, with Buy Now or add to cart.</p></figcaption></figure>
+      <figure class="shot"><div class="phone"><img loading="lazy" src="assets/screens/buyer-prices.webp" width="520" height="1125" alt="Public Market Prices"></div>
+        <figcaption><h3>Market prices</h3><p>Reference prices set by the cooperative for each crop.</p></figcaption></figure>
+      <figure class="shot"><div class="phone"><img loading="lazy" src="assets/screens/buyer-orders.webp" width="520" height="1125" alt="My Orders with status filters"></div>
+        <figcaption><h3>My Orders</h3><p>Filter orders by status and see pickup or delivery at a glance.</p></figcaption></figure>
+      <figure class="shot"><div class="phone"><img loading="lazy" src="assets/screens/buyer-order-detail.webp" width="520" height="1125" alt="Order details with order journey"></div>
+        <figcaption><h3>Order journey</h3><p>Follow an order from Order Placed through to Completed.</p></figcaption></figure>
+    </div>
+
+    <div class="gallery" data-role="staff" role="tabpanel" hidden>
+      <figure class="shot"><div class="phone"><img loading="lazy" src="assets/screens/staff-dashboard.webp" width="520" height="1125" alt="Manager Dashboard"></div>
+        <figcaption><h3>Dashboard</h3><p>Today's priorities and cooperative performance at a glance.</p></figcaption></figure>
+      <figure class="shot"><div class="phone"><img loading="lazy" src="assets/screens/staff-programs.webp" width="520" height="1125" alt="Program Management"></div>
+        <figcaption><h3>Program Management</h3><p>Create and run distribution and sales programs.</p></figcaption></figure>
+      <figure class="shot"><div class="phone"><img loading="lazy" src="assets/screens/staff-approvals.webp" width="520" height="1125" alt="Listing Approvals"></div>
+        <figcaption><h3>Listing Approvals</h3><p>Review Farmer listings before they reach Buyers.</p></figcaption></figure>
+      <figure class="shot"><div class="phone"><img loading="lazy" src="assets/screens/staff-analytics.webp" width="520" height="1125" alt="Analytics Dashboard"></div>
+        <figcaption><h3>Analytics</h3><p>Member participation, price snapshots and top harvested crops.</p></figcaption></figure>
+      <figure class="shot"><div class="phone"><img loading="lazy" src="assets/screens/staff-officer-access.webp" width="520" height="1125" alt="Officer module access sheet"></div>
+        <figcaption><h3>Officer access</h3><p>The Manager sets View Only or Manage for each staff area.</p></figcaption></figure>
+      <figure class="shot"><div class="phone"><img loading="lazy" src="assets/screens/staff-calendar.webp" width="520" height="1125" alt="Cooperative Calendar"></div>
+        <figcaption><h3>Cooperative Calendar</h3><p>Meetings, loan due dates, harvests, announcements and programs.</p></figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<!-- F. HOW TO USE -->
+<section class="section" id="how">
+  <div class="wrap how-grid">
+    <div class="reveal">
+      <p class="kicker">How to use SAGANA</p>
+      <h2>Get started in six steps.</h2>
+      <ol class="steps">
+        <li><span class="n">1</span><div><h3>Open this page on your Android phone</h3><p>Scan the QR code in the <a href="#download">Download</a> section, or visit this website in Chrome.</p></div></li>
+        <li><span class="n">2</span><div><h3>Download and install</h3><p>Tap <strong>Download Now</strong>, then open the downloaded file. Follow the <a href="#install">install steps</a> if Android asks for permission.</p></div></li>
+        <li><span class="n">3</span><div><h3>Open SAGANA</h3><p>Tap <strong>SAGANA</strong> on your phone. Allow camera, location or notifications when asked, if you want those features.</p></div></li>
+        <li><span class="n">4</span><div><h3>Choose how to enter</h3><p>Pick <strong>Login</strong>, or look around first with <strong>Explore as Buyer</strong> or <strong>Explore as Farmer</strong>. The preview uses sample data and creates no real records.</p></div></li>
+        <li><span class="n">5</span><div><h3>Create your account</h3><p>On Login, tap <strong>Create an Account</strong>. <strong>Buyers</strong> enter their name, a username and a password, and can sign in right away. <strong>Farmers</strong> complete three steps (personal, address, review) and wait for the Manager's approval; the app shows your application status. Registration is for Barangay Payanas, Torrijos, Marinduque.</p></div></li>
+        <li><span class="n">6</span><div><h3>Staff accounts</h3><p>Officer accounts are created by the Manager. The Manager account is supplied by the cooperative. Sign in with the username and password you were given, then choose your own password when prompted.</p></div></li>
+      </ol>
+    </div>
+    <div class="how-visual reveal">
+      <figure class="phone"><img loading="lazy" src="assets/screens/app-welcome.webp" width="520" height="1125" alt="SAGANA welcome screen with Explore as Buyer, Explore as Farmer and Login"></figure>
+      <p class="caption">The welcome screen: log in, or explore first.</p>
+    </div>
+  </div>
+</section>
+
+<!-- G. DOWNLOAD -->
+<section class="section dl" id="download">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <p class="kicker kicker-light">Download SAGANA</p>
+      <h2>Get SAGANA for Android.</h2>
+      <p>One direct download. Scan the QR code on your phone or tap the button.</p>
+    </div>
+
+    <div class="dl-grid">
+      <div class="dl-card reveal" id="dl" data-state="loading">
+        <div class="dl-top">
+          <img src="assets/logo-96.png" width="64" height="64" alt="">
+          <div>
+            <h3>SAGANA for Android</h3>
+            <p class="dl-status" id="dl-status"><span class="dot"></span><span id="dl-status-text">Checking the latest version…</span></p>
+          </div>
+        </div>
+        <a class="btn btn-gold btn-lg btn-block" id="dl-btn" href="/download">
+          <svg class="ic"><use href="#i-download"/></svg> Download Now
+        </a>
+        <p class="dl-note" id="dl-note" hidden></p>
+        <dl class="specs">
+          <div><dt>Version</dt><dd id="dl-version">–</dd></div>
+          <div><dt>Released</dt><dd id="dl-date">–</dd></div>
+          <div><dt>File size</dt><dd id="dl-size">–</dd></div>
+          <div><dt>Android</dt><dd>7.0 (API 24) or later</dd></div>
+        </dl>
+        <ul class="req">
+          <li>Internet is needed to register, sign in, place orders and approve records.</li>
+          <li>Maps and phone notifications also need Google Play services on the device.</li>
+          <li>Leave enough free storage for the app and your offline records.</li>
+        </ul>
+      </div>
+
+      <div class="qr-card reveal">
+        <h3><svg class="ic"><use href="#i-qr"/></svg> Scan to download</h3>
+        <img class="qr" src="assets/sagana-qr.svg" width="240" height="240" alt="QR code that opens the SAGANA download page">
+        <p>Point your phone camera at the code. It opens this page, so it always leads to the newest version.</p>
+        <a class="link-light" href="assets/sagana-qr.png" download="SAGANA-QR.png">Save the QR code (PNG)</a>
+      </div>
+    </div>
+
+    <div class="install reveal" id="install">
+      <h3>How to install</h3>
+      <ol>
+        <li><span class="n">1</span><p>Open this page in <strong>Chrome</strong> on your Android phone and tap <strong>Download Now</strong>. (Some in-app browsers block file downloads.)</p></li>
+        <li><span class="n">2</span><p>When it finishes, tap the downloaded file <strong>SAGANA.apk</strong>.</p></li>
+        <li><span class="n">3</span><p>If Android says it cannot install from this source, open <strong>Settings</strong> from the prompt and allow your browser to install apps. The wording differs by phone. Then go back and tap the file again.</p></li>
+        <li><span class="n">4</span><p>Tap <strong>Install</strong>. Android may warn that the app is not from Google Play, because SAGANA is shared directly. Continue only if you downloaded it from this page.</p></li>
+        <li><span class="n">5</span><p>Tap <strong>Open</strong>, or find <strong>SAGANA</strong> in your apps.</p></li>
+      </ol>
+    </div>
+
+    <details class="history reveal" id="history" hidden>
+      <summary>Version history <svg class="ic"><use href="#i-chevron"/></svg></summary>
+      <ul id="history-list"></ul>
+    </details>
+  </div>
+</section>
+
+<!-- H. FAQ -->
+<section class="section" id="faq">
+  <div class="wrap faq-wrap">
+    <div class="section-head reveal">
+      <p class="kicker">Frequently asked questions</p>
+      <h2>Good to know.</h2>
+    </div>
+    <div class="faq reveal">
+      <details><summary>What is SAGANA? <svg class="ic"><use href="#i-chevron"/></svg></summary>
+        <p>SAGANA is a mobile system for the SP3 Agriculture Cooperative of Barangay Payanas, Torrijos, Marinduque. It combines farm records, a digital marketplace, loans, programs, prices and reports.</p></details>
+      <details><summary>Who can use it? <svg class="ic"><use href="#i-chevron"/></svg></summary>
+        <p>Buyers and Farmers can create their own account. Officer accounts are created by the Manager, and the Manager account is supplied by the cooperative. Anyone can also try a read-only preview with sample data.</p></details>
+      <details><summary>How do I register as a Farmer? <svg class="ic"><use href="#i-chevron"/></svg></summary>
+        <p>Choose <strong>Create an Account</strong> and select the Farmer tab. You complete three steps (personal information, address, review). The address area is fixed to Barangay Payanas, Torrijos, Marinduque. Your application then waits for the Manager's decision. If it is disapproved, you can fix the details and resubmit.</p></details>
+      <details><summary>Do I need an account just to look around? <svg class="ic"><use href="#i-chevron"/></svg></summary>
+        <p>No. On the welcome screen, choose <strong>Explore as Buyer</strong> or <strong>Explore as Farmer</strong>. The preview shows sample data and cannot create real orders or records.</p></details>
+      <details><summary>Which phones are supported? <svg class="ic"><use href="#i-chevron"/></svg></summary>
+        <p>Android 7.0 (Nougat, API level 24) or later. Older versions are not supported. Maps and phone notifications also need Google Play services.</p></details>
+      <details><summary>Is there an iPhone version? <svg class="ic"><use href="#i-chevron"/></svg></summary>
+        <p>No. SAGANA is currently available for Android only.</p></details>
+      <details><summary>Is SAGANA on Google Play? <svg class="ic"><use href="#i-chevron"/></svg></summary>
+        <p>No. It is shared as a direct download from this page. Always download it here, and not from links sent by others.</p></details>
+      <details><summary>Why does Android warn me when I install? <svg class="ic"><use href="#i-chevron"/></svg></summary>
+        <p>Android shows a warning for any app installed from outside Google Play. If you downloaded SAGANA from this page, you can continue. See <a href="#install">How to install</a>.</p></details>
+      <details><summary>Does it work without internet? <svg class="ic"><use href="#i-chevron"/></svg></summary>
+        <p>Partly. Farmer harvests and expenses, some profile changes, staff loan payments and capital contributions can be saved on the phone and sent automatically when the connection returns. Buyer actions, orders, listings, approvals and loan requests need internet. Sign in and load your records while connected first.</p></details>
+      <details><summary>How do payments work? <svg class="ic"><use href="#i-chevron"/></svg></summary>
+        <p>SAGANA records cash payment when an order is handed over. The customer then confirms receipt in the app.</p></details>
+      <details><summary>Can I use SAGANA in Filipino? <svg class="ic"><use href="#i-chevron"/></svg></summary>
+        <p>Yes. The app is available in English and Filipino, and in light or dark mode.</p></details>
+    </div>
+  </div>
+</section>
+
+<!-- I. TEAM -->
+<section class="section section-tint" id="team">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <p class="kicker">About the team</p>
+      <h2>The people behind SAGANA.</h2>
+      <p>SAGANA was developed as a capstone project for the SP3 Agriculture Cooperative.</p>
+    </div>
+    <div class="team">
+      <article class="member reveal"><span class="avatar" aria-hidden="true">JS</span>
+        <h3>Jhon Drhy M. Salangsang</h3><p class="role-tag">Lead Developer</p>
+        <p>Leads the technical build: the Flutter mobile app, the Supabase database and its security rules, offline sync and the overall architecture.</p></article>
+      <article class="member reveal"><span class="avatar" aria-hidden="true">MY</span>
+        <h3>Marc Louie M. Yañez</h3><p class="role-tag">UI/UX Designer</p>
+        <p>Designs how SAGANA looks and feels: screens, navigation and visual style, in simple bilingual layouts for members with different levels of digital experience.</p></article>
+      <article class="member reveal"><span class="avatar" aria-hidden="true">JR</span>
+        <h3>John Harvey Revilloza</h3><p class="role-tag">System Analyst</p>
+        <p>Gathers and documents what the cooperative needs: workflows, business rules and the requirements the system is built against.</p></article>
+      <article class="member reveal"><span class="avatar" aria-hidden="true">JR</span>
+        <h3>John Harold Revillioza</h3><p class="role-tag">QA Tester</p>
+        <p>Checks that SAGANA works as specified: tests features for each role, verifies business rules, reports defects and confirms fixes.</p></article>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- J. FOOTER -->
+<footer class="footer">
+  <div class="wrap footer-grid">
+    <div class="f-brand">
+      <a class="brand brand-light" href="#top"><img src="assets/logo-96.png" width="36" height="36" alt=""><span>SAGANA</span></a>
+      <p>Streamlined Agricultural Gateway for Agribusiness, Networking, and Analytics.</p>
+      <p class="muted">Empowering the farmers of Payanas.</p>
+    </div>
+    <nav class="f-links" aria-label="Footer">
+      <h4>Explore</h4>
+      <a href="#about">About</a><a href="#features">Features</a><a href="#roles">Who it's for</a><a href="#preview">Preview</a>
+    </nav>
+    <nav class="f-links" aria-label="Footer, more">
+      <h4>Get started</h4>
+      <a href="#how">How to use</a><a href="#download">Download</a><a href="#faq">FAQ</a><a href="#team">Team</a>
+    </nav>
+    <div class="f-info">
+      <h4>Project</h4>
+      <p>SP3 Agriculture Cooperative<br>Barangay Payanas, Torrijos, Marinduque</p>
+      <p class="muted">A capstone project of the SAGANA development team.</p>
+    </div>
+  </div>
+  <div class="wrap footer-bottom">
+    <p>© 2026 SAGANA Development Team. All rights reserved.</p>
+  </div>
+</footer>
+
+<script src="app.js"></script>
+</body>
+</html>

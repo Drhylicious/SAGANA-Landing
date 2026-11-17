@@ -1,0 +1,28 @@
+{
+  "name": "sagana-landing",
+  "version": "1.0.0",
+  "description": "Official SAGANA landing page",
+  "scripts": {
+    "images": "node scripts/build-images.mjs",
+    "qr": "node scripts/make-qr.mjs",
+    "verify-qr": "node scripts/verify-qr.mjs",
+    "dev": "npx --yes serve . -l 3000"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Drhylicious/SAGANA-Landing.git"
+  },
+  "keywords": [],
+  "type": "module",
+  "bugs": {
+    "url": "https://github.com/Drhylicious/SAGANA-Landing/issues"
+  },
+  "homepage": "https://github.com/Drhylicious/SAGANA-Landing#readme",
+  "devDependencies": {
+    "jsqr": "^1.4.0",
+    "pngjs": "^7.0.0",
+    "qrcode": "^1.5.4",
+    "sharp": "^0.35.5"
+  },
+  "private": true
+}
