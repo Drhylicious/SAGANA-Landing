@@ -217,9 +217,12 @@ ul, ol { margin: 0; padding: 0; }
 .faq details p { margin: 0 0 18px; font-size: .96rem; }
 
 /* Team */
+.team-photo { max-width: 780px; margin: 0 auto 36px; background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); overflow: hidden; box-shadow: var(--shadow); }
+.team-photo img { width: 100%; aspect-ratio: 16 / 9; object-fit: cover; display: block; }
+.team-photo figcaption { padding: 14px 20px; text-align: center; font-size: .92rem; font-weight: 500; color: var(--muted); border-top: 1px solid var(--line); }
 .team { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
 .member { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); padding: 26px 22px; text-align: center; }
-.avatar { display: grid; place-items: center; width: 72px; height: 72px; margin: 0 auto 16px; border-radius: 50%; background: linear-gradient(145deg, var(--green-900), var(--green-700)); color: #fff; font: 600 1.4rem var(--font-head); letter-spacing: .02em; }
+.avatar { display: block; width: 96px; height: 96px; margin: 0 auto 16px; border-radius: 50%; object-fit: cover; border: 3px solid var(--green-700); background: var(--lime-soft); box-shadow: 0 8px 20px rgba(0, 69, 13, .14); }
 .member h3 { margin-bottom: .3em; }
 .role-tag { display: inline-block; font: 600 .8rem var(--font-head); color: var(--green-900); background: var(--lime); padding: 3px 12px; border-radius: 999px; margin-bottom: 12px; }
 .member p:last-child { font-size: .9rem; margin: 0; }
